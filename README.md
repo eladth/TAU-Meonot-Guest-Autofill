@@ -15,7 +15,7 @@ A Manifest V3 Chrome extension designed to automate host and guest visitor regis
 ## Features
 
 * **Host Profile Persistence:** Save your personal host details once (Full Name, Israeli ID, Phone, Dormitory complex, Building, Floor, Apartment, and Side).
-* **Multi-Step Form Handling:** Automatically handles cascading dropdown postbacks (Dorm $\rightarrow$ Building $\rightarrow$ Floor $\rightarrow$ Apartment) and auto-selects visitor categories.
+* **Multi-Step Form Handling:** Automatically handles cascading dropdown postbacks (Dorm → Building → Floor → Apartment) and auto-selects visitor categories.
 * **Guest List Management:** Maintain a reusable local list of frequent visitors (Name, Israeli ID, Phone).
 * **Multi-Slot Guest Filling:** Supports filling up to 3 guest slots dynamically based on available form fields.
 
@@ -25,4 +25,4 @@ A Manifest V3 Chrome extension designed to automate host and guest visitor regis
 
 1. **Clone or Download the Repository:**
    ```bash
-   git clone [https://github.com/](https://github.com/)<YOUR_USERNAME>/<REPO_NAME>.git
+   git clone [https://github.com/eladth/TAU-Meonot-Guest-Autofill.git](https://github.com/eladth/TAU-Meonot-Guest-Autofill.git)
