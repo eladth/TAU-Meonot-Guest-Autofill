@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Meonot Guest Autofill",
+  "version": "1.0",
+  "description": "Store guest data and autofill forms on Shikun Binui Meonot.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meonot.shikunbinui.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+:root {
+  --primary: #4a90e2;
+  --primary-hover: #357abd;
+  --bg-color: #f0f2f5;
+  --card-bg: #ffffff;
+  --text-main: #2c3e50;
+  --text-label: #7f8c8d;
+  --border: #e1e4e8;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  width: 500px; /* רוחב מורחב למניעת גלילה */
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  box-sizing: border-box;
+}
+
+/* כותרת */
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* כפתור קישור לאתר */
+.site-link {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+
+.site-link:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.main-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* כרטיסים */
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+}
+
+.card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #f0f2f5;
+  padding-bottom: 2px;
+}
+
+/* מערכת הגריד */
+.grid-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: flex-end;
+}
+
+.three-col .input-wrapper { width: 33%; }
+.four-col .input-wrapper { width: 25%; }
+
+.mixed-row {
+  justify-content: space-between;
+}
+
+.side-input {
+  width: 20%;
+}
+
+.btn-group {
+  width: 78%;
+  display: flex;
+  gap: 5px;
+}
+
+/* עיצוב שדות קלט */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 10px;
+  color: var(--text-label);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  background: #f9f9f9;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: var(--primary);
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+/* כפתורים */
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.3);
+}
+.btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-1px); }
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.btn-outline:hover { background-color: #eef5ff; }
+
+/* אזור האורחים */
+.guest-input-group {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.compact-input {
+  margin: 0;
+  background: white;
+}
+
+#guestName { flex: 2; }
+#guestId { flex: 1.5; }
+#guestPhone { flex: 1.5; }
+
+.btn-icon {
+  flex: 0 0 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--success);
+  color: white;
+}
+.btn-icon:hover { background-color: #218838; }
+
+/* רשימת אורחים */
+.list-container {
+  max-height: 100px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.guest-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guest-list li {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.guest-list li:last-child { border-bottom: none; }
+.guest-list li:hover { background-color: #f0f7ff; }
+
+.guest-actions {
+  display: flex;
+  gap: 3px;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 3px;
+  padding: 3px 6px;
+  font-size: 10px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.2s;
+  min-width: 20px;
+  text-align: center;
+}
+
+.fill-btn { background-color: var(--primary); }
+.edit-btn { background-color: var(--warning); color: #333; }
+.del-btn { background-color: #e74c3c; }
+
+.action-btn:hover { opacity: 0.8; }
+
+/* עיצוב פס גלילה */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #bbb; }

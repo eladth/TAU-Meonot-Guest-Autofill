@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meonot Autofill</title>
+  <!-- שורה זו מחברת את קובץ העיצוב -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>Meonot Autofill</h1>
+    <!-- הקישור לאתר -->
+    <a href="https://meonot.shikunbinui.com/" target="_blank" class="site-link">לאתר 🌐</a>
+  </div>
+
+  <div class="main-container">
+    
+    <!-- כרטיס המארח -->
+    <div class="card host-card">
+      <div class="card-title">הפרטים שלי (מארח)</div>
+      
+      <!-- שורה 1: פרטים אישיים -->
+      <div class="grid-row three-col">
+        <div class="input-wrapper">
+          <label>שם מלא</label>
+          <input type="text" id="hostName" />
+        </div>
+        <div class="input-wrapper">
+          <label>ת.ז</label>
+          <input type="text" id="hostId" />
+        </div>
+        <div class="input-wrapper">
+          <label>טלפון</label>
+          <input type="text" id="hostPhone" />
+        </div>
+      </div>
+
+      <!-- שורה 2: כתובת -->
+      <div class="grid-row four-col">
+        <div class="input-wrapper">
+          <label>מעונות</label>
+          <input type="text" id="hostDorms" />
+        </div>
+        <div class="input-wrapper">
+          <label>בניין</label>
+          <input type="text" id="hostBuilding" />
+        </div>
+        <div class="input-wrapper">
+          <label>קומה</label>
+          <input type="text" id="hostFloor" />
+        </div>
+        <div class="input-wrapper">
+          <label>דירה</label>
+          <input type="text" id="hostApt" />
+        </div>
+      </div>
+      
+      <!-- שורה 3: צד וכפתורים -->
+      <div class="grid-row mixed-row">
+         <div class="input-wrapper side-input">
+            <label>צד</label>
+            <input type="text" id="hostSide" />
+         </div>
+         <div class="btn-group">
+            <button id="saveHostBtn" class="btn btn-outline">שמור פרטים</button>
+            <button id="fillHostBtn" class="btn btn-primary">מלא טופס באתר</button>
+         </div>
+      </div>
+    </div>
+
+    <!-- כרטיס אורח ורשימה -->
+    <div class="card guest-card">
+      <div class="card-title">ניהול אורחים</div>
+      
+      <div class="guest-input-group">
+        <input type="text" id="guestName" placeholder="שם האורח" class="compact-input" />
+        <input type="text" id="guestId" placeholder="ת.ז" class="compact-input" />
+        <input type="text" id="guestPhone" placeholder="טלפון" class="compact-input" />
+        <button id="addGuestBtn" class="btn btn-icon" title="הוסף">+</button>
+      </div>
+
+      <div class="list-container">
+        <ul id="guestList" class="guest-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
