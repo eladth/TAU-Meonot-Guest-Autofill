@@ -24,6 +24,4 @@ A Manifest V3 Chrome extension designed to automate host and guest visitor regis
 ## Installation
 
 1. **Clone or Download the Repository:**
-```bash
-git clone [https://github.com/eladth/TAU-Meonot-Guest-Autofill.git](https://github.com/eladth/TAU-Meonot-Guest-Autofill.git)
-```
+git clone https://github.com/eladth/TAU-Meonot-Guest-Autofill.git
